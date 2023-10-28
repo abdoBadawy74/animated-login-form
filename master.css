@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: sans-serif;
+  background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+}
+.container {
+  position: relative;
+  width: 400px;
+  padding: 60px 40px;
+  background-color: #fff;
+}
+header {
+  font-size: 40px;
+  margin-bottom: 60px;
+  font-family: "Montserrat", sans-serif;
+}
+.input-field,
+form .button {
+  margin: 25px 0;
+  position: relative;
+  height: 50px;
+  width: 100%;
+}
+.input-field input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid silver;
+  padding-left: 15px;
+  outline: none;
+  font-size: 19px;
+  transition: 0.3s;
+}
+input:focus {
+  border: 1px solid #1da1f2;
+}
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: grey;
+  font-size: 18px;
+  transition: 0.3s;
+}
+input:focus ~ label,
+input:valid ~ label {
+  transform: translateY(-33px);
+  background-color: #fff;
+  font-size: 16px;
+  color: #1da1f2;
+}
+form .button {
+  margin-top: 30px;
+  overflow: hidden;
+  z-index: 222;
+}
+.button .inner {
+  position: absolute;
+  height: 100%;
+  width: 300%;
+  left: -100%;
+  z-index: -222;
+  transition: 0.4s;
+  background: -webkit-linear-gradient(
+    right,
+    #00dbde,
+    #fc00ff,
+    #00dbde,
+    #fc00ff
+  );
+}
+.button:hover .inner{
+    left: 0;
+}
+.button button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
