@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,11 +21,12 @@
       <header>Login Form</header>
       <form>
         <div class="input-field">
-          <input type="text" required/>
+          <input type="text" required />
           <label> Email or username </label>
         </div>
         <div class="input-field">
-          <input type="password" required/>
+          <input type="password" class="pass" required />
+          <span class="show">Show</span>
           <label>Password</label>
         </div>
         <div class="button">
@@ -29,6 +34,20 @@
           <button>LOGIN</button>
         </div>
       </form>
+      <div class="auth">Or login With</div>
+      <div class="links">
+        <div class="facebook">
+          <i class="fa-brands fa-square-facebook"></i>
+          <span>Facebook</span>
+        </div>
+        <div class="google">
+        <i class="fa-brands fa-square-google-plus"></i>
+        <span>Google</span>
+        </div>
     </div>
+    <div class="signup">
+      Not a member? <a href="#">Signup Now</a>
+    </div>
+    <script src="./script.js"></script>
   </body>
 </html>

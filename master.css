@@ -16,7 +16,7 @@ body {
 .container {
   position: relative;
   width: 400px;
-  padding: 60px 40px;
+  padding:40px;
   background-color: #fff;
 }
 header {
@@ -26,7 +26,7 @@ header {
 }
 .input-field,
 form .button {
-  margin: 25px 0;
+  margin: 15px 0;
   position: relative;
   height: 50px;
   width: 100%;
@@ -43,15 +43,29 @@ form .button {
 input:focus {
   border: 1px solid #1da1f2;
 }
-.input-field label {
+.input-field label, span.show {
   position: absolute;
   top: 50%;
-  left: 15px;
   transform: translateY(-50%);
+}
+.input-field label{
+  left: 15px;
   pointer-events: none;
   color: grey;
   font-size: 18px;
   transition: 0.3s;
+}
+span.show {
+ right: 20px; 
+ font-size: 14px;
+ color: #111;
+ font-family: 'Open Sans', sans-serif;
+ cursor: pointer;
+ user-select: none;
+ visibility: hidden;
+}
+input:valid ~ span.show{
+  visibility: visible;
 }
 input:focus ~ label,
 input:valid ~ label {
@@ -93,4 +107,58 @@ form .button {
   font-size: 20px;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
+}
+.container .auth{
+  margin: 20px 0 20px 0;
+  font-size: 16px;
+  color: grey;
+}
+.links{
+  display: flex;
+  cursor: pointer;
+}
+.facebook, .google{
+  height: 40px;
+  width: 100%;
+  border: 1px solid silver;
+  border-radius: 3px;
+  margin: 0 10px;
+  position: relative;
+  transition: 0.3s;
+}
+.facebook:hover{
+  border: 1px solid #4267b2;
+}
+.google:hover{
+  border: 1px solid #dd4b39;
+}
+.facebook i , .facebook span{
+  color: #4267b2;
+}
+.google i , .google span{
+  color: #dd4b39;
+}
+.links i{
+  font-size: 23px;
+  line-height: 40px;
+  margin-left: -90px;
+}
+.links span{
+  position: absolute;
+  font-size: 17px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 8px;
+  font-family: 'Open Sans', sans-serif;
+}
+.signup{
+  margin-top: 20px;
+  font-family: 'Noto Sans', sans-serif;
+}
+.signup a{
+  color: #3498db;
+  text-decoration: none;
+}
+.signup a:hover{
+  text-decoration: underline;
 }
